@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.app{
+}
+
+.content {
+    width: 1000px;
+    background-color: #fff;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 5rem 0;
+}
+
+.filter {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 1em;
+    background: #fcfaf5;
+    box-shadow:15px 15px 30px rgba(0, 0, 0, 0.15);
+}
