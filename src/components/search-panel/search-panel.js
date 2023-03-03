@@ -1,11 +1,25 @@
-import React from 'react';
+import React,{Component} from 'react';
 import './search-panel.css'
-function SearchPanel() {
-    return (
-        <div>
-            <input className='form-control own-search' placeholder='search anyway...' type="text"/>
-        </div>
-    );
-}
 
-export default SearchPanel;
+
+class SearchPanel extends Component {
+    constructor(props){
+        super(props)
+        this.state={
+            term: ''
+        }
+    }
+    updateTermHandler = e =>{
+        const term = e.target.value.toLowerCase()
+        this.setState({term:term})
+        this.props.updateTermHandler(term)
+    }
+  render() {
+    return (
+      <div>
+        <input  className='form-control own-search' type="text"  onChange={this.updateTermHandler} value={this.state.value}/>
+      </div>
+    )
+  }
+}
+export default SearchPanel
